@@ -1,0 +1,16 @@
+\documentclass[11pt]{article}
+\usepackage[makestderr]{pythontex}
+
+\begin{pycode}
+import pickle
+
+vars = pickle.load(open('vars.pkl', 'rb'))
+\end{pycode}
+
+\begin{document}
+\section{My report}
+
+These are the results:\\
+a = \py{vars['a']} \\
+b = \py{vars['b']}
+\end{document}
